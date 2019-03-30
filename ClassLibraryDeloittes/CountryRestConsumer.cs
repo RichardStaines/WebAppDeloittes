@@ -21,7 +21,7 @@ namespace ClassLibraryRestConsumers
 
         public CountryRestConsumer(string countryName)
         {
-            string urlRequest = URL + "/" + countryName;
+            string urlRequest = URL + "/" + countryName;            
 
             jsonRestConsumer = new JsonRestConsumer(urlRequest, "");
             if (jsonRestConsumer.jsonToken != null)

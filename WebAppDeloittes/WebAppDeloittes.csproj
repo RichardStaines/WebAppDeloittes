@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="RestConsumers\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

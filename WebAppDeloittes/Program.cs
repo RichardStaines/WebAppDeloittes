@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using WebAppDeloittes.city.model;
 
 namespace WebAppDeloittes
 {
@@ -15,6 +16,8 @@ namespace WebAppDeloittes
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
+
+            CityContext.CreateTestData();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
