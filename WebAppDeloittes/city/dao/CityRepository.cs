@@ -72,7 +72,10 @@ namespace WebAppDeloittes.city.dao
             return "City successfully deleted";
         }
 
-        // 
+        /// <summary>
+        /// Some useful canned data for trying things out with
+        /// </summary>
+        /// <returns></returns>        
         public static List<City> GetTestCityList()
         {
             City[] cities =
@@ -94,8 +97,8 @@ namespace WebAppDeloittes.city.dao
                     },
                     new City()
                     {
-                        Name = "Aberogwr", Country = "United Kingdom", State = "Glamorgan", Rating = 5,
-                        Established = new DateTime(1953, 01, 01), EstimatedPopulation = 2000
+                        Name = "Birmingham", Country = "United Kingdom", State = "Midlands", Rating = 5,
+                        Established = new DateTime(1953, 01, 01), EstimatedPopulation = 1000000
                     },
                     new City()
                     {

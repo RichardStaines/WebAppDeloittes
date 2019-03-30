@@ -55,7 +55,7 @@ namespace WebAppDeloittes.city.api
                 cityView.Country3Code = countryRestConsumer.alpha3;
 
                 OpenWeatherMap weatherRestConsumer = new OpenWeatherMap(cityView.Name, cityView.Country2Code);
-                cityView.Weather = cityView.Weather;
+                cityView.Weather = weatherRestConsumer.weatherForecast;
 
                 cityViews.Add(cityView);
             }
