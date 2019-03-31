@@ -12,11 +12,12 @@ namespace WebAppDeloittes.city.dao
         CityContext cityContext;
 
         public CityRepository() {
-            cityContext = new CityContext();
+
+            this.cityContext = new CityContext();
         }
 
         public List<City> SearchCitiesByName(string name)
-        {
+        {                              
             List<City> cities = cityContext.Cities.Where(c => c.Name == name).ToList();
 
             return cities;
@@ -92,17 +93,23 @@ namespace WebAppDeloittes.city.dao
                     },
                     new City()
                     {
-                        Name = "Swindon", Country = "United Kingdom", State = "Swindow", Rating = 5,
+                        Name = "London", Country = "Canada", State = "Ontario", Rating = 3,
+                        Established = new DateTime(1945, 01, 01), EstimatedPopulation = 120000
+                    },
+
+                    new City()
+                    {
+                        Name = "Swindon", Country = "United Kingdom", State = "Swindow", Rating = 1,
                         Established = new DateTime(1852, 01, 01), EstimatedPopulation = 50000
                     },
                     new City()
                     {
-                        Name = "Birmingham", Country = "United Kingdom", State = "Midlands", Rating = 5,
+                        Name = "Birmingham", Country = "United Kingdom", State = "Midlands", Rating = 4,
                         Established = new DateTime(1953, 01, 01), EstimatedPopulation = 1000000
                     },
                     new City()
                     {
-                        Name = "Cardiff", Country = "United Kingdom", State = "Glamorgan", Rating = 5,
+                        Name = "Cardiff", Country = "United Kingdom", State = "Glamorgan", Rating = 4,
                         Established = new DateTime(1102, 01, 01), EstimatedPopulation = 250000
                     }
             };

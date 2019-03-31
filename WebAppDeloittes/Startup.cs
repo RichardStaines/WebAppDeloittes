@@ -25,8 +25,9 @@ namespace WebAppDeloittes
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
-        {
-//            services.AddDbContext<CityContext>();
+        {                    
+ //           services.AddDbContext<CityContext>(options =>
+ //               options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddMvc();
         }
@@ -44,7 +45,7 @@ namespace WebAppDeloittes
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Shw mae Pobl y Deloitte!");
+                await context.Response.WriteAsync("Test from Deloitte!");
             });
         }
         #endregion

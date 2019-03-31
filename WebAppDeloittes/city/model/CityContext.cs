@@ -7,16 +7,19 @@ using WebAppDeloittes.city.dao;
 
 namespace WebAppDeloittes.city.model
 {
-    public class CityContext: DbContext
+    public class CityContext: Microsoft.EntityFrameworkCore.DbContext
     {
         public CityContext() : base()
+        { }
+
+        public CityContext(Microsoft.EntityFrameworkCore.DbContextOptions<CityContext> options) : base(options)
         { }
 
         public DbSet<City> Cities { get; set; }
 
         public static void CreateTestData()
         {
-            using (var ctx = new CityContext())
+            using (var ctx = new CityContext()) 
             {
                 List<City> cities = CityRepository.GetTestCityList();
                 foreach (City city in cities)

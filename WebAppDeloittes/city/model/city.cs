@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebAppDeloittes.city.model
 {
-    [Table("City", Schema = "main")]
+    [Table("City")]
     public class City
     {
         [Key]
