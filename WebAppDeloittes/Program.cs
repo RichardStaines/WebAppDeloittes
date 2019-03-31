@@ -15,8 +15,6 @@ namespace WebAppDeloittes
     {
         public static void Main(string[] args)
         {
-            // CityContext.CreateTestData();
-
             CreateWebHostBuilder(args).Build().Run();
         }
 
