@@ -7,7 +7,7 @@ using WebAppDeloittes.city.api;
 
 namespace WebAppDeloittes.city.dao
 {
-    public class CityRepository
+    public class CityRepository : ICityRepository
     {
         CityContext cityContext;
 

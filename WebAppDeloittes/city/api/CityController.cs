@@ -13,7 +13,7 @@ namespace WebAppDeloittes.city.api
     [Route("api/[Controller]")]
     public class CityController : Controller
     {
-        private CityRepository cityRepository;
+        private ICityRepository cityRepository;
        
         public CityController()
         {
